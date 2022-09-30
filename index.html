@@ -1,30 +1,52 @@
 <html lang="es">
-
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./Style/style.css">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./Style/style.css" />
     <title>Desencriptador</title>
-</head>
+  </head>
 
-<body>
-<main>
-    <head>
-        <div id="logo-container">
-            <img id="logo-head" src="Images/Logo.png" alt="">
-        </div>
-    </head>
-    
-        <div id="message-container">
-            <img id="image-message" src="./Images/Muñeco.png" alt="">
-        </div>
-    
+  <body>
+    <header class="header">
+      <div id="logo-container">
+        <img id="logo-head" src="Images/Logo.png" alt="" />
+      </div>
+    </header>
 
+    <section class="container-main">
+      <article class="container-primary">
+        <div class="container-input">
+          <textarea
+            name=""
+            id="text-input"
+            cols="30"
+            rows="10"
+            placeholder="Ingresa tu texto a encriptar"
+          ></textarea>
+        </div>
+
+        <div class="container-buttons">
+          <div class="buttons">
+            <button class="btn btn-encrypter"><span>Encriptar</span></button>
+            <button class="btn btn-decrypter"><span>Desencriptar</span></button>
+          </div>
+        </div>
+      </article>
+
+      <article class="container-secondary">
+        <textarea name="" type="text" readonly id="text-encrypted" cols="30" rows="10"></textarea>
+        <div class="div-secondary" id="div-hidden">
+            <img src="./Images/Muñeco.png" alt="">
+            <h2>No se encontro ningun texto</h2>
+            <p>Favor de agregar un texto</p>
+        </div>
+        <button class="btn_copy"><span>Copiar</span></button>
+      </article>
+    </section>
 
     <footer></footer>
-</main>
-    <script src="./js/index.js"></script>
-</body>
 
+    <script src="./js/index.js"></script>
+  </body>
 </html>
