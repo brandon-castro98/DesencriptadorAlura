@@ -54,6 +54,7 @@ function copyText(){
 
   function clearText(){
     encrypted.value = '';
+    text.value = '';
   }
 
 
