@@ -1,14 +1,16 @@
 const text = document.querySelector('#text-input');
 const divHidden = document.querySelector('#div-hidden');
 const encrypted = document.querySelector('#text-encrypted');
-const copy = document.querySelector('.btn_copy');
 
 
+
+const btnCopy = document.querySelector('.btn_copy');
+btnCopy.addEventListener('click',copyText);
 
 const encrypter = document.querySelector('.btn-encrypter').addEventListener('click',encrypterText);
 
-/* const decrypter = document.querySelector('.btn-decrypter').addEventListener('click',decrypterText);
- */
+const decrypter = document.querySelector('.btn-decrypter').addEventListener('click',decrypterText);
+
 
 
 function encrypterText(){
@@ -23,12 +25,29 @@ function encrypterText(){
     mostrar(input);
 };
 
+function decrypterText() {
+    let input = text.value;
+    let encrypterRules = [["e","enter"],["i","imes"],["a","ai"],["o","ober"],["u","ufat"]];
+    for(let i = 0; i< encrypterRules.length;i++){
+        if(input.includes(encrypterRules[i][1])){
+            input = input.replaceAll(encrypterRules[i][1],encrypterRules[i][0]);
+        }
+    }
+    mostrar(input);
+}
+
 
 function mostrar(textEncrypted){
-    console.log(textEncrypted);
     divHidden.style.display = 'none'
     encrypted.style.display = 'block'
+    btnCopy.style.display = 'block';
     encrypted.value = textEncrypted;
 }
+
+function copyText(){
+    encrypted.select();
+    document.execCommand("copy");
+  }
+
 
 
