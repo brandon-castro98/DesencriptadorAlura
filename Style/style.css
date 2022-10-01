@@ -8,9 +8,12 @@ body {
   background-color: aliceblue;
 }
 
+#logo-container {
+    position: relative;
+    padding: 25px 0;
+}
+
 .container-main {
-  border-color: blue;
-  border-style: solid;
   position: relative;
 }
 
@@ -18,8 +21,6 @@ body {
   display: flex;
   flex-direction: column;
   position: absolute;
-  border-color: aqua;
-  border-style: solid;
   width: 1000px;
   height: 700px;
   top: 20%;
@@ -94,8 +95,6 @@ body {
   height: 900px;
   position: relative;
   border: 2px;
-  border-style: solid;
-  border-color: red;
   border-radius: 10px;
   left: 70%;
 }
@@ -148,9 +147,67 @@ p {
   transition: 0.5s all;
 }
 
+
+
 .btn_copy:hover {
   color: #ffffff;
   font-size: 20px;
   background-color: rgb(160, 166, 184);
   transform: scale(1.2);
+}
+
+.btn_clear {
+  display: none;
+  cursor: pointer;
+  background-color: aliceblue;
+  position: absolute;
+  font-size: 1rem;
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+  border-radius: 4px;
+  width: 150px;
+  height: 50px;
+  top: 90%;
+  left: 30%;
+  transition: 0.5s all;
+}
+
+.btn_clear:hover {
+    color: #ffffff;
+    font-size: 20px;
+    background-color: rgb(160, 166, 184);
+    transform: scale(1.2);
+  }
+
+.redes {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    margin-top: 9%;
+    width: auto;
+    height:5%;
+    gap: 5px;
+}
+
+.git {
+    position: relative;
+}
+
+.git img {
+    position: absolute;
+    left: 80%;
+    transition: 0.5s all;
+}
+
+.git-link:hover {
+    transform: scale(1.2);
+}
+
+.nombre {
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    position: relative;
+    font-size: large;
+  
+}
+.nombre p {
+    position: absolute;
+    top: 15px;
 }

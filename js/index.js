@@ -2,6 +2,8 @@ const text = document.querySelector('#text-input');
 const divHidden = document.querySelector('#div-hidden');
 const encrypted = document.querySelector('#text-encrypted');
 
+const btnClear = document.querySelector('.btn_clear');
+btnClear.addEventListener('click',clearText);
 
 
 const btnCopy = document.querySelector('.btn_copy');
@@ -38,8 +40,9 @@ function decrypterText() {
 
 
 function mostrar(textEncrypted){
-    divHidden.style.display = 'none'
-    encrypted.style.display = 'block'
+    divHidden.style.display = 'none';
+    btnClear.style.display = 'block';
+    encrypted.style.display = 'block';
     btnCopy.style.display = 'block';
     encrypted.value = textEncrypted;
 }
@@ -47,6 +50,10 @@ function mostrar(textEncrypted){
 function copyText(){
     encrypted.select();
     document.execCommand("copy");
+  }
+
+  function clearText(){
+    encrypted.value = '';
   }
 
 
